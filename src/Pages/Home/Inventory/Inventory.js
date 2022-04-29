@@ -19,7 +19,7 @@ const Inventory = ({ item }) => {
                     <p className='text-xs font-thin mt-2'>{description}</p>
                     <hr className='my-2 opacity-20' />
                     <div className='flex justify-between font-thin'>
-                        <p>Quantity : {quantity}</p>
+                        {quantity === 0 ? <p className='text-red-500'>Stock Out</p> : <p>Quantity : {quantity}</p>}
                         <p>Dealer : {supplier}</p>
                     </div>
                     <hr className='my-2 opacity-20' />

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios'
+import { toast } from 'react-toastify';
 
 const UpdateItems = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const [inventory, setInventory] = useState({})
     useEffect(() => {
@@ -20,7 +22,7 @@ const UpdateItems = () => {
         const newInventory = { quantity: newQuantity, ...rest };
         const { data } = await axios.put(`http://localhost:5000/items/${id}`, newInventory)
         setInventory(data);
-        alert("Delivered Successfully.")
+        toast.info(`${name} delivered`)
     }
 
     // add items
@@ -33,7 +35,7 @@ const UpdateItems = () => {
         const { data } = await axios.put(`http://localhost:5000/items/${id}`, newInventory)
         setInventory(data);
         // console.log(data)
-        alert("Quantity Added Successfully.")
+        toast.success(`${number} products added successfully.`)
     }
 
     return (
@@ -52,7 +54,7 @@ const UpdateItems = () => {
                         <div className='flex justify-between items-start'>
                             <h3 className='text-2xl font-semibold'>{name}</h3>
                             {/* deliverd button */}
-                            <button onClick={handleDelivered} className='hover:bg-amber-500 border border-amber-500 py-2 px-8 rounded-md duration-200 ease-in-out'>Delivered</button>
+                            <button onClick={handleDelivered} className={`hover:bg-amber-500 border border-amber-500 py-2 px-8 rounded-md duration-200 ease-in-out ${quantity === 0 && 'cursor-not-allowed opacity-20'}`}>Delivered</button>
                         </div>
                         <hr className='my-3 opacity-20' />
                         <div className='text-left'>
@@ -61,11 +63,11 @@ const UpdateItems = () => {
                         </div>
                         <hr className='my-3 opacity-20' />
                         <div className='flex justify-between font-thin'>
-                            <p>Quantity : {quantity}</p>
+                            {quantity === 0 ? <p className='text-red-500'>Stock Out</p> : <p>Quantity : {quantity}</p>}
                             <p>Dealer : {supplier}</p>
                         </div>
                         <hr className='my-3 opacity-20' />
-                        <button className='hover:bg-amber-500 bg-amber-600 py-3 px-10 rounded-md duration-200 ease-in-out'>Manage Inventories</button>
+                        <button onClick={() => navigate('/inventories/manage')} className='hover:bg-amber-500 bg-amber-600 py-3 px-10 rounded-md duration-200 ease-in-out'>Manage Inventories</button>
                     </div>
                 </article>
                 {/* Add Items */}
@@ -79,7 +81,7 @@ const UpdateItems = () => {
                     </div>
                 </article>
             </section>
-        </div>
+        </div >
     );
 };
 
