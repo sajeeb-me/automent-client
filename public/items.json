@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Mazda CX 9",
+        "img": "",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    }
+]
