@@ -13,7 +13,7 @@ const Inventory = ({ item }) => {
                     </div>
                 </div>
                 <div className='px-4 pb-4'>
-                    <h3 className='text-right text-2xl font-bold text-amber-600'>${price}/-</h3>
+                    <h3 className='text-right text-2xl font-bold text-amber-600'>${price?.toLocaleString("en-US")}/-</h3>
                     <hr className='my-2 opacity-20' />
                     <h3 className='text-2xl font-semibold'>{name}</h3>
                     <p className='text-xs font-thin mt-2'>{description}</p>
