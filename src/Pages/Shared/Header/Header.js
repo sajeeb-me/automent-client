@@ -4,9 +4,8 @@ import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     return (
-
         <nav className="
-        relative
+        sticky-top
         w-full
         flex flex-wrap
         items-center
@@ -14,7 +13,7 @@ const Header = () => {
         py-4
         navbar navbar-expand-lg navbar-light
         ">
-            <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+            <div className="container-fluid w-full flex flex-wrap items-center justify-between px-20">
                 <button className="
             navbar-toggler
             text-gray-500
@@ -36,8 +35,8 @@ const Header = () => {
                 <div className="collapse navbar-collapse flex-grow justify-between items-center" id="navbarSupportedContent">
                     <Link to='/'>AutoMent</Link>
                     <div className='block md:flex gap-3'>
-                        <ActiveLink to='/'>Home</ActiveLink>
-                        <ActiveLink to='/blogs'>Blogs</ActiveLink>
+                        <ActiveLink className='pb-2' to='/'>Home</ActiveLink>
+                        <ActiveLink className='pb-2' to='/blogs'>Blogs</ActiveLink>
                     </div>
                     <div>
                         <Link to='login'><button className='hover:bg-amber-500 border border-amber-500 py-1 px-5 rounded-md duration-200 ease-in-out'>Login</button></Link>

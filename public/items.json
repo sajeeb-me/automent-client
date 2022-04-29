@@ -1,7 +1,70 @@
 [
     {
         "name": "Mazda CX 9",
-        "img": "",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
+        "description": "Short Description Goes Here with some awesome sentence.",
+        "quantity": 10,
+        "supplier": "Mazda"
+    },
+    {
+        "name": "Mazda CX 9",
+        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
         "description": "Short Description Goes Here with some awesome sentence.",
         "quantity": 10,
         "supplier": "Mazda"
