@@ -37,7 +37,7 @@ const UpdateItems = () => {
     }
 
     return (
-        <div className='px-20'>
+        <div className='px-4 md:px-20'>
             <section className='py-10 grid grid-cols-1 md:grid-cols-3'>
                 {/* item details */}
                 <article className='col-span-2'>
@@ -49,7 +49,7 @@ const UpdateItems = () => {
                     </div>
                     {/* details */}
                     <div className='px-4 pb-4'>
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between items-start'>
                             <h3 className='text-2xl font-semibold'>{name}</h3>
                             {/* deliverd button */}
                             <button onClick={handleDelivered} className='hover:bg-amber-500 border border-amber-500 py-2 px-8 rounded-md duration-200 ease-in-out'>Delivered</button>
@@ -74,7 +74,7 @@ const UpdateItems = () => {
                         <h1 className='text-xl font-semibold'>Add Quantity</h1>
                         <form onSubmit={handleAddItem} className='mt-10 mb-3'>
                             <input className='block w-full bg-transparent border-b border-slate-800 text-slate-800 outline-none placeholder:text-slate-800 ' type="number" name='number' placeholder='Add number' required />
-                            <input className='hover:bg-white border py-2 px-6 mt-8 rounded-md duration-200 ease-in-out' type="submit" value="Add Item" />
+                            <input className='hover:bg-white border hover:text-amber-500 text-white py-2 px-6 mt-8 rounded-md font-semibold duration-200 ease-in-out' type="submit" value="Add Item" />
                         </form>
                     </div>
                 </article>
