@@ -6,7 +6,7 @@ const useInventories = () => {
     useEffect(() => {
         (async () => {
             const { data } = await axios.get('http://localhost:5000/items')
-            console.log(data)
+            // console.log(data)
             setInventories(data)
         })()
     }, [])

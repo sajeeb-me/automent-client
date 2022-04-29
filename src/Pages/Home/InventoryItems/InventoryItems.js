@@ -11,11 +11,12 @@ const InventoryItems = () => {
                 <p className='mt-3 w-full md:w-1/2 mx-auto opacity-70 font-thin'>Your inventories, you can have a look below. If you want to update any Item, please click Update button.</p>
                 <div className='my-10 grid grid-cols-1 md:grid-cols-3 gap-6'>
                     {
-                        inventories.map(item => <Inventory key={item._id} item={item} />)
+                        inventories.slice(0, 6).map(item => <Inventory key={item._id} item={item} />)
                     }
                 </div>
+                <button className='hover:bg-amber-500 bg-amber-600 py-3 px-10 rounded-md duration-200 ease-in-out'>Manage Inventories</button>
             </section>
-        </div>
+        </div >
     );
 };
 
