@@ -1,8 +1,13 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
+    const [user] = useAuthState(auth)
+
     return (
         <nav className="
         sticky-top
@@ -40,7 +45,12 @@ const Header = () => {
                         <ActiveLink className='pb-2' to='/blogs'>Blogs</ActiveLink>
                     </div>
                     <div>
-                        <Link to='login'><button className='hover:bg-amber-500 border border-amber-500 py-1 px-5 rounded-md duration-200 ease-in-out'>Login</button></Link>
+                        {
+                            user ?
+                                <button onClick={() => signOut(auth)} className='hover:bg-red-500 hover:text-white border border-red-500 py-1 px-5 rounded-md duration-200 ease-in-out text-red-500'>Logout</button>
+                                :
+                                <Link to='login'><button className='hover:bg-amber-500 border border-amber-500 py-1 px-5 rounded-md duration-200 ease-in-out'>Login</button></Link>
+                        }
                     </div>
                 </div>
             </div>
