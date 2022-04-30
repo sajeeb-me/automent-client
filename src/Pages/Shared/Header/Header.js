@@ -43,6 +43,14 @@ const Header = () => {
                     <div className='block md:flex gap-3'>
                         <ActiveLink className='pb-2' to='/'>Home</ActiveLink>
                         <ActiveLink className='pb-2' to='/blogs'>Blogs</ActiveLink>
+                        {
+                            user &&
+                            <div className='block md:flex gap-3'>
+                                <ActiveLink className='pb-2' to='/inventories/manage'>Manage Items</ActiveLink>
+                                <ActiveLink className='pb-2' to='/inventories/add'>Add Items</ActiveLink>
+                                <ActiveLink className='pb-2' to='/inventories/my'>My Items</ActiveLink>
+                            </div>
+                        }
                     </div>
                     <div>
                         {

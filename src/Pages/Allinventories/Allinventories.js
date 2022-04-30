@@ -9,9 +9,6 @@ const Allinventories = ({ item, handleDelete }) => {
     return (
         <tbody>
             <tr className="border-b border-slate-400 transition duration-300 ease-in-out hover:bg-slate-900">
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium hidden md:inline-block">
-                    1
-                </td>
                 <td className="text-sm font-light py-4 whitespace-nowrap">
                     {name}
                 </td>

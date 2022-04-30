@@ -1,27 +1,24 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import Allinventories from '../Allinventories/Allinventories';
 
-const ManageItems = () => {
-    const [pageCount, setPageCount] = useState(0);
-    const [pageNo, setPageNo] = useState(0);
+const MyItems = () => {
     const navigate = useNavigate();
+    const [user] = useAuthState(auth)
 
     const [inventories, setInventories] = useState([])
     useEffect(() => {
         (async () => {
-            const { data } = await axios.get(`http://localhost:5000/items?pageNo=${pageNo}`)
-            setInventories(data)
+            const email = user?.email
+            if (email) {
+                const { data } = await axios.get(`http://localhost:5000/items?email=${email}`)
+                setInventories(data)
+            }
         })()
-    }, [pageNo])
-
-    useEffect(() => {
-        (async () => {
-            const { data } = await axios.get('http://localhost:5000/items/total')
-            setPageCount(Math.ceil(data.total / 4))
-        })()
-    }, [])
+    }, [user?.email])
 
     const handleDelete = async (id) => {
         (async () => {
@@ -42,8 +39,8 @@ const ManageItems = () => {
             <p className='text-center md:text-right mr-0 md:mr-20 mb-5 md:mb-0'>
                 <button onClick={() => navigate('/inventories/add')} className='bg-green-600 py-3 px-5 rounded-lg hover:bg-green-700 duration-300 ease-in-out'>Add new inventory</button>
             </p>
-            <h1 className='text-2xl md:text-4xl font-bold'>Manage Your Inventories</h1>
-            <p className='text-sm md:text-base mt-3 w-full md:w-1/2 mx-auto opacity-70 font-thin mb-10'>You can manage your all inventories from here. You can update , delete and add more inventories from here.</p>
+            <h1 className='text-2xl md:text-4xl font-bold'>My Inventories</h1>
+            <p className='text-sm md:text-base mt-3 w-full md:w-1/2 mx-auto opacity-70 font-thin mb-10'>Here you can see your all inventories added by you. You can update , delete and add more inventories from here.</p>
             <div>
                 <div className="flex flex-col">
                     <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -81,19 +78,8 @@ const ManageItems = () => {
                     </div>
                 </div>
             </div>
-            <section className='my-5'>
-                {
-                    [...Array(pageCount).keys()].map(num => <button
-                        key={num}
-                        onClick={() => setPageNo(num)}
-                        className={`px-3 py-1 border border-amber-500 rounded-md mx-1 ${num === pageNo ? 'bg-amber-500' : ''}`}
-                    >
-                        {num + 1}
-                    </button>)
-                }
-            </section>
         </div>
     );
 };
 
-export default ManageItems;
+export default MyItems;

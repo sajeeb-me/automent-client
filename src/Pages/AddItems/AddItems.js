@@ -10,7 +10,7 @@ const AddItems = () => {
     const [user] = useAuthState(auth)
 
     const onSubmit = async (data) => {
-        // console.log(data);
+        console.log(data);
         (async () => {
             await axios.post('http://localhost:5000/items', data)
                 .then(data => {
