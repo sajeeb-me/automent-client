@@ -1,11 +1,29 @@
-import React from 'react';
-import useInventories from '../../Hooks/useInventories';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import Allinventories from '../Allinventories/Allinventories';
 
 const ManageItems = () => {
-    const [inventories] = useInventories()
+    const [pageCount, setPageCount] = useState(0);
+    const [pageNo, setPageNo] = useState(0);
+
+    const [inventories, setInventories] = useState([])
+    useEffect(() => {
+        (async () => {
+            const { data } = await axios.get(`http://localhost:5000/items?pageNo=${pageNo}`)
+            setInventories(data)
+        })()
+    }, [pageNo])
+
+    useEffect(() => {
+        (async () => {
+            const { data } = await axios.get('http://localhost:5000/items/total')
+            setPageCount(Math.ceil(data.total / 4))
+        })()
+    }, [])
+    console.log(pageCount)
+
     return (
-        <div>
+        <div className='py-10'>
             <h1>Manage Items: {inventories.length}</h1>
             <div>
                 <div className="flex flex-col">
@@ -44,7 +62,17 @@ const ManageItems = () => {
                     </div>
                 </div>
             </div>
-
+            <section className='my-5'>
+                {
+                    [...Array(pageCount).keys()].map(num => <button
+                        key={num}
+                        onClick={() => setPageNo(num)}
+                        className={`px-3 py-1 border border-amber-500 rounded-md mx-1 ${num === pageNo ? 'bg-amber-500' : ''}`}
+                    >
+                        {num + 1}
+                    </button>)
+                }
+            </section>
         </div>
     );
 };

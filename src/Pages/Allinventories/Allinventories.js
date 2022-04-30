@@ -4,15 +4,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Allinventories = ({ item }) => {
-    const navigate = useNavigate()
     const { _id, name, img, description, price, quantity, supplier } = item;
-    const [totalItems, setTotalItems] = useState('');
-    useEffect(() => {
-        (async () => {
-            const { data } = await axios.get('http://localhost:5000/items/total')
-            setTotalItems(data.items)
-        })()
-    }, [])
+    const navigate = useNavigate()
+
+
     return (
         <tbody>
             <tr className="border-b border-slate-400 transition duration-300 ease-in-out hover:bg-slate-900">
