@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import PageLoading from '../../PageLoading/PageLoading';
@@ -9,6 +9,9 @@ import PageLoading from '../../PageLoading/PageLoading';
 const Login = () => {
     const navigate = useNavigate();
     const { register, handleSubmit } = useForm();
+    let location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -21,9 +24,9 @@ const Login = () => {
         if (user) {
             // console.log(user)
             // toast.success('Login successful')
-            navigate('/')
+            navigate(from, { replace: true });
         }
-    }, [navigate, user])
+    }, [from, navigate, user])
     if (loading) {
         return <PageLoading />
     }
