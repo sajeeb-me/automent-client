@@ -6,17 +6,17 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddItems = () => {
-    const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth)
+    const { register, handleSubmit } = useForm();
 
-    const onSubmit = async (data) => {
-        console.log(data);
+    const onSubmit = (data) => {
+        // console.log(data);
         (async () => {
             await axios.post('http://localhost:5000/items', data)
                 .then(data => {
                     const confirmation = window.confirm("Please check all information and confirm.")
                     if (confirmation) {
-                        console.log(data)
+                        // console.log(data)
                         toast.info('Product added successfully')
                     }
                 })
@@ -27,7 +27,7 @@ const AddItems = () => {
             <section className='w-full md:w-3/6 mx-auto border p-5 md:p-20 rounded-lg'>
                 <h3 className='text-2xl font-bold mb-10'>Add One Inventory</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full opacity-30' value={user?.email} type="text" {...register("email", { required: true })} readOnly disabled />
+                    <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full opacity-30' value={user?.email} type="text" {...register("email")} readOnly />
 
                     <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full' placeholder='Inventory name' type="text" {...register("name", { required: true })} />
 
