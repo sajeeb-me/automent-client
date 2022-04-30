@@ -10,6 +10,7 @@ import Register from './Pages/Login/Register/Register';
 import ManageItems from './Pages/ManageItems/ManageItems';
 import MyItems from './Pages/MyItems/MyItems';
 import PageLoading from './Pages/PageLoading/PageLoading';
+import PageNotFound from './Pages/PageNotFound/PageNotFound';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Header from './Pages/Shared/Header/Header';
 import UpdateItems from './Pages/UpdateItems/UpdateItems';
@@ -45,6 +46,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/loading' element={<PageLoading />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
       <ToastContainer />
     </div>

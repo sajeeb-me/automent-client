@@ -1,15 +1,16 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     const [user] = useAuthState(auth)
+    const location = useLocation()
 
     return (
-        <nav className="
+        <nav className={`
         sticky-top
         w-full
         flex flex-wrap
@@ -18,7 +19,8 @@ const Header = () => {
         py-4
         navbar navbar-expand-lg navbar-light
         bg-slate-800
-        ">
+        ${location.key === 'default' && 'hidden'}
+        `}>
             <div className="container-fluid w-full flex flex-wrap items-center justify-between px-20">
                 <button className="
             navbar-toggler

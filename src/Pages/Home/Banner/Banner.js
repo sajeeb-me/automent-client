@@ -5,7 +5,7 @@ import BannerImage from '../../../images/porsche-1851246_1280.jpg'
 
 const Banner = () => {
     return (
-        <div className='h-[500px] bg-cover flex items-center px-5 md:px-20'
+        <div className='h-[550px] bg-cover flex items-center px-5 md:px-20'
             style={{
                 backgroundImage: `url(${BannerImage})`
             }}

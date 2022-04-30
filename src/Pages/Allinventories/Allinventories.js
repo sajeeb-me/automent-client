@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Allinventories = ({ item, handleDelete }) => {
-    const { _id, name, img, description, price, quantity, supplier } = item;
+    const { _id, name, price, quantity, supplier } = item;
     const navigate = useNavigate()
 
 
