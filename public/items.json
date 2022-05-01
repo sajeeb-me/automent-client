@@ -1,90 +1,66 @@
 [
     {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
+        "name": "Lamborghini Urus",
+        "img": "https://i.ibb.co/kGhpqK7/lamborghini.jpg",
+        "description": "Lamborghini Urus is the first Super Sport Utility Vehicle in the world to merge the soul of a super sports car with the functionality of an SUV.",
+        "price": 3500000,
+        "quantity": 8,
+        "supplier": "Lamborghini"
+    },
+    {
+        "name": "BMW X7",
+        "img": "https://i.ibb.co/BB1tb1x/bmw.jpg",
+        "description": "The 2022 BMW X7 is a seven-passenger three-row SUV that is available in two trim levels: xDrive40i and M50i.",
+        "price": 3000000,
+        "quantity": 3,
+        "supplier": "BMW"
+    },
+    {
+        "name": "Audi RS7 Sportback",
+        "img": "https://i.ibb.co/1610NN3/audi.jpg",
+        "description": "The new Audi RS 7 Sportback marks the model's second generation and is more unique than ever before.",
+        "price": 2800000,
+        "quantity": 25,
+        "supplier": "Audi"
+    },
+    {
+        "name": "Ferrari 812 Superfast",
+        "img": "https://i.ibb.co/1XhXNqn/ferrari.jpg",
+        "description": "Ferrari claims that the 812 Superfast has a top speed of 340 km/h (211 mph) with a 0–100 km/h (0 - 62 mph) acceleration time of 2.9 seconds.",
+        "price": 2500000,
+        "quantity": 12,
+        "supplier": "Ferrari"
+    },
+    {
+        "name": "Bugatti Bolide",
+        "img": "https://i.ibb.co/JBc0ykT/bugatti.jpg",
+        "description": "Bugatti announced the Bolide would be the last car ever made with their W16 engine.",
+        "price": 2450000,
         "quantity": 10,
-        "supplier": "Mazda"
+        "supplier": "Bugatti"
+    },
+    {
+        "name": "Porsche Cayenne",
+        "img": "https://i.ibb.co/7Qwt10x/porsche.jpg",
+        "description": "The Porsche Cayenne is a series of mid-size luxury crossover sport utility vehicles manufactured by the German automaker Porsche since 2002.",
+        "price": 2200000,
+        "quantity": 13,
+        "supplier": "Porsche"
     },
     {
         "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
+        "img": "https://i.ibb.co/W3khdXM/mazda.jpg",
+        "description": "The Mazda CX-9 is a three-row SUV with seven seats. A six-seat layout is optional, and it swaps the second-row bench seat for a pair of captain's chairs.",
+        "price": 2050000,
+        "quantity": 5,
         "supplier": "Mazda"
     },
     {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
-    },
-    {
-        "name": "Mazda CX 9",
-        "img": "https://i.ibb.co/tqwgm1q/car.jpg",
-        "description": "Short Description Goes Here with some awesome sentence.",
-        "price": 3500,
-        "quantity": 10,
-        "supplier": "Mazda"
+        "name": "Mercedes C-Class Cabriolet",
+        "img": "https://i.ibb.co/dGDYQJG/mercedes.jpg",
+        "description": "Powering it is an all-new M264 petrol engine which is compliant to the BS-VI standards.",
+        "price": 1800000,
+        "quantity": 18,
+        "supplier": "Mercedes"
     }
 ]

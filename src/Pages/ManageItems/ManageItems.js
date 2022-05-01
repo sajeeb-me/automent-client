@@ -6,12 +6,13 @@ import Allinventories from '../Allinventories/Allinventories';
 const ManageItems = () => {
     const [pageCount, setPageCount] = useState(0);
     const [pageNo, setPageNo] = useState(0);
+    const items = 10;
     const navigate = useNavigate();
 
     const [inventories, setInventories] = useState([])
     useEffect(() => {
         (async () => {
-            const { data } = await axios.get(`http://localhost:5000/items?pageNo=${pageNo}`)
+            const { data } = await axios.get(`http://localhost:5000/items?pageNo=${pageNo}&items=${items}`)
             setInventories(data)
         })()
     }, [pageNo])
@@ -19,7 +20,7 @@ const ManageItems = () => {
     useEffect(() => {
         (async () => {
             const { data } = await axios.get('http://localhost:5000/items/total')
-            setPageCount(Math.ceil(data.total / 4))
+            setPageCount(Math.ceil(data.total / items))
         })()
     }, [])
 
