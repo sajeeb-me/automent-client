@@ -1,6 +1,6 @@
 import React from 'react';
 import './Banner.css'
-import BannerImage from '../../../images/porsche-1851246_1280.jpg'
+import BannerImage from '../../../images/header-bg.jpg'
 import { useNavigate } from 'react-router-dom';
 
 

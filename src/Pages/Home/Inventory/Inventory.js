@@ -16,7 +16,7 @@ const Inventory = ({ item }) => {
                     <h3 className='text-right text-2xl font-bold text-cyan-600'>${price?.toLocaleString("en-US")}/-</h3>
                     <hr className='my-2 opacity-20' />
                     <h3 className='text-2xl font-semibold'>{name}</h3>
-                    <p className='text-xs font-thin mt-2'>{description}</p>
+                    <p className='text-xs font-thin mt-2' title={`${description}`}>{description.slice(0, 100)}...</p>
                     <hr className='my-2 opacity-20' />
                     <div className='flex justify-between font-thin'>
                         {quantity === 0 ? <p className='text-red-500'>Stock Out</p> : <p>Quantity : {quantity}</p>}
