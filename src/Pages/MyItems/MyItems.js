@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -14,11 +15,23 @@ const MyItems = () => {
         (async () => {
             const email = user?.email
             if (email) {
-                const { data } = await axios.get(`http://localhost:5000/items?email=${email}`)
-                setInventories(data)
+                try {
+                    const { data } = await axios.get(`http://localhost:5000/items?email=${email}`, {
+                        headers: {
+                            authentication: `Bearer ${localStorage.getItem('accessToken')}`
+                        }
+                    })
+                    setInventories(data)
+                }
+                catch (error) {
+                    if (error.response.status === 401 || error.response.status === 403) {
+                        signOut(auth)
+                        navigate('/login')
+                    }
+                }
             }
         })()
-    }, [user?.email])
+    }, [user?.email, navigate])
 
     const handleDelete = async (id) => {
         (async () => {

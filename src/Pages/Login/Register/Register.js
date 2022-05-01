@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import PageLoading from '../../PageLoading/PageLoading';
 import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useToken from '../../../Hooks/useToken';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -19,14 +20,15 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     const [sendEmailVerification] = useSendEmailVerification(auth);
     const [updateProfile] = useUpdateProfile(auth);
+    const [token] = useToken(user)
 
     useEffect(() => {
-        if (user) {
+        if (token) {
             // console.log(user)
             toast.success('User created')
             navigate('/')
         }
-    }, [navigate, user])
+    }, [navigate, token])
     if (loading) {
         return <PageLoading />
     }

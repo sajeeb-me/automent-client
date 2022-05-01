@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import PageLoading from '../../PageLoading/PageLoading';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useToken from '../../../Hooks/useToken';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -20,14 +21,13 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [token] = useToken(user);
 
     useEffect(() => {
-        if (user) {
-            // console.log(user)
-            // toast.success('Login successful')
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [from, navigate, user])
+    }, [from, navigate, token])
     if (loading) {
         return <PageLoading />
     }
