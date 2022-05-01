@@ -5,7 +5,7 @@ import NotFoundImage from '../../images/not-found-image.gif'
 const PageNotFound = () => {
     const navigate = useNavigate()
     return (
-        <div className='h-[100vh] bg-cover flex items-center justify-center px-5 md:px-20'
+        <div className='h-[89vh] bg-cover flex items-center justify-center px-5 md:px-20'
             style={{
                 backgroundImage: `url(${NotFoundImage})`
             }}

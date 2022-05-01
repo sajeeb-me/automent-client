@@ -16,7 +16,7 @@ const InventoryItems = () => {
                         inventories.slice(0, 6).map(item => <Inventory key={item._id} item={item} />)
                     }
                 </div>
-                <button onClick={() => navigate('/inventories/manage')} className='hover:bg-amber-500 bg-amber-600 py-3 px-10 rounded-md duration-200 ease-in-out'>Manage Inventories</button>
+                <button onClick={() => navigate('/inventories/manage')} className='hover:bg-cyan-500 bg-cyan-600 py-3 px-10 rounded-md duration-200 ease-in-out'>Manage Inventories</button>
             </section>
         </div >
     );

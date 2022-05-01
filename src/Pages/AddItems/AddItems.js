@@ -43,7 +43,7 @@ const AddItems = () => {
                         <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full' placeholder='Supplier name' type="text" {...register("supplier", { required: true })} />
                     </div>
 
-                    <input className='hover:bg-amber-500 bg-amber-600 py-3 px-10 rounded-md w-full duration-200 ease-in-out' type="submit" value="Add Inventory" />
+                    <input className='hover:bg-cyan-500 bg-cyan-600 py-3 px-10 rounded-md w-full duration-200 ease-in-out' type="submit" value="Add Inventory" />
                 </form>
             </section>
         </div>

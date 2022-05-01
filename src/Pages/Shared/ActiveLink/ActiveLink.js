@@ -9,8 +9,8 @@ function ActiveLink({ children, to, ...props }) {
         <div>
             <Link
                 style={{
-                    color: match ? "#f59e0b" : "",
-                    borderBottom: match ? "2px solid #f59e0b" : ""
+                    color: match ? "#06b6d4" : "",
+                    borderBottom: match ? "2px solid #06b6d4" : ""
                 }}
                 to={to}
                 {...props}

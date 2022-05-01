@@ -86,7 +86,7 @@ const ManageItems = () => {
                     [...Array(pageCount).keys()].map(num => <button
                         key={num}
                         onClick={() => setPageNo(num)}
-                        className={`px-3 py-1 border border-amber-500 rounded-md mx-1 ${num === pageNo ? 'bg-amber-500' : ''}`}
+                        className={`px-3 py-1 border border-cyan-500 rounded-md mx-1 ${num === pageNo ? 'bg-cyan-500' : ''}`}
                     >
                         {num + 1}
                     </button>)

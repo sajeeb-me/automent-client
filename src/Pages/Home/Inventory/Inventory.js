@@ -13,7 +13,7 @@ const Inventory = ({ item }) => {
                     </div>
                 </div>
                 <div className='px-4 pb-4'>
-                    <h3 className='text-right text-2xl font-bold text-amber-600'>${price?.toLocaleString("en-US")}/-</h3>
+                    <h3 className='text-right text-2xl font-bold text-cyan-600'>${price?.toLocaleString("en-US")}/-</h3>
                     <hr className='my-2 opacity-20' />
                     <h3 className='text-2xl font-semibold'>{name}</h3>
                     <p className='text-xs font-thin mt-2'>{description}</p>
@@ -23,7 +23,7 @@ const Inventory = ({ item }) => {
                         <p>Dealer : {supplier}</p>
                     </div>
                     <hr className='my-2 opacity-20' />
-                    <p className='text-left mt-5'><button onClick={() => navigate(`/inventories/${_id}`)} className='hover:bg-amber-500 border border-amber-500 py-2 px-8 rounded-md duration-200 ease-in-out'>Update</button></p>
+                    <p className='text-left mt-5'><button onClick={() => navigate(`/inventories/${_id}`)} className='hover:bg-cyan-500 border border-cyan-500 py-2 px-8 rounded-md duration-200 ease-in-out'>Update</button></p>
                 </div>
             </section>
         </div>

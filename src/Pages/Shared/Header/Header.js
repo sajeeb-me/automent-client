@@ -8,6 +8,7 @@ import ActiveLink from '../ActiveLink/ActiveLink';
 const Header = () => {
     const [user] = useAuthState(auth)
     const location = useLocation()
+    // console.log(location)
 
     return (
         <nav className={`
@@ -19,8 +20,8 @@ const Header = () => {
         py-4
         navbar navbar-expand-lg navbar-light
         bg-slate-800
-        ${location.key === 'default' && 'hidden'}
         `}>
+            {/* ${location.key === 'default' && 'hidden'} */}
             <div className="container-fluid w-full flex flex-wrap items-center justify-between px-20">
                 <button className="
             navbar-toggler
@@ -59,7 +60,7 @@ const Header = () => {
                             user ?
                                 <button onClick={() => signOut(auth)} className='hover:bg-red-500 hover:text-white border border-red-500 py-1 px-5 rounded-md duration-200 ease-in-out text-red-500'>Logout</button>
                                 :
-                                <Link to='login'><button className='hover:bg-amber-500 border border-amber-500 py-1 px-5 rounded-md duration-200 ease-in-out'>Login</button></Link>
+                                <Link to='login'><button className='hover:bg-cyan-500 border border-cyan-500 py-1 px-5 rounded-md duration-200 ease-in-out'>Login</button></Link>
                         }
                     </div>
                 </div>

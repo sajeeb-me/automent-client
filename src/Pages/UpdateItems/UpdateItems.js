@@ -54,11 +54,11 @@ const UpdateItems = () => {
                         <div className='flex justify-between items-start'>
                             <h3 className='text-2xl font-semibold'>{name}</h3>
                             {/* deliverd button */}
-                            <button onClick={handleDelivered} className={`hover:bg-amber-500 border border-amber-500 py-2 px-8 rounded-md duration-200 ease-in-out ${quantity === 0 && 'cursor-not-allowed opacity-20'}`}>Delivered</button>
+                            <button onClick={handleDelivered} className={`hover:bg-cyan-500 border border-cyan-500 py-2 px-8 rounded-md duration-200 ease-in-out ${quantity === 0 && 'cursor-not-allowed opacity-20'}`}>Delivered</button>
                         </div>
                         <hr className='my-3 opacity-20' />
                         <div className='text-left'>
-                            <h3 className='text-3xl font-bold text-amber-600'>${price?.toLocaleString("en-US")}/-</h3>
+                            <h3 className='text-3xl font-bold text-cyan-600'>${price?.toLocaleString("en-US")}/-</h3>
                             <p className='font-thin mt-2'>{description}</p>
                         </div>
                         <hr className='my-3 opacity-20' />
@@ -67,16 +67,16 @@ const UpdateItems = () => {
                             <p>Dealer : {supplier}</p>
                         </div>
                         <hr className='my-3 opacity-20' />
-                        <button onClick={() => navigate('/inventories/manage')} className='hover:bg-amber-500 bg-amber-600 py-3 px-10 rounded-md duration-200 ease-in-out'>Manage Inventories</button>
+                        <button onClick={() => navigate('/inventories/manage')} className='hover:bg-cyan-500 bg-cyan-600 py-3 px-10 rounded-md duration-200 ease-in-out'>Manage Inventories</button>
                     </div>
                 </article>
                 {/* Add Items */}
                 <article className='p-5 '>
-                    <div className='bg-amber-500 text-slate-800 rounded-xl p-5 sticky-top top-20'>
+                    <div className='bg-cyan-500 text-slate-800 rounded-xl p-5 sticky-top top-20'>
                         <h1 className='text-xl font-semibold'>Add Quantity</h1>
                         <form onSubmit={handleAddItem} className='mt-10 mb-3'>
                             <input className='block w-full bg-transparent border-b border-slate-800 text-slate-800 outline-none placeholder:text-slate-800 ' type="number" name='number' placeholder='Add number' required />
-                            <input className='hover:bg-white border hover:text-amber-500 text-white py-2 px-6 mt-8 rounded-md font-semibold duration-200 ease-in-out' type="submit" value="Add Item" />
+                            <input className='hover:bg-white border hover:text-cyan-500 text-white py-2 px-6 mt-8 rounded-md font-semibold duration-200 ease-in-out' type="submit" value="Add Item" />
                         </form>
                     </div>
                 </article>
