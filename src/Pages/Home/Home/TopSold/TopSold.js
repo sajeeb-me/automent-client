@@ -44,7 +44,7 @@ const TopSold = () => {
                 </article>
                 {/* text side */}
                 <article className='md:text-left'>
-                    <h1 className='text-2xl md:text-5xl font-bold'>Most Popular Car</h1>
+                    <h1 className='text-2xl md:text-5xl font-bold'>Most <span className='text-cyan-500'>Popular</span> Car</h1>
                     <p className='font-thin opacity-70 mt-5'>The top sold car is here. You can import more this car.
                         <br />
                         This car becomes most popular now a day.</p>

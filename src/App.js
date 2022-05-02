@@ -12,6 +12,7 @@ import MyItems from './Pages/MyItems/MyItems';
 import PageLoading from './Pages/PageLoading/PageLoading';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import UpdateItems from './Pages/UpdateItems/UpdateItems';
 
@@ -48,6 +49,7 @@ function App() {
         <Route path='/loading' element={<PageLoading />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
+      <Footer />
       <ToastContainer />
     </div>
   );

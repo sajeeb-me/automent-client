@@ -17,7 +17,7 @@ const Header = () => {
         justify-between
         py-4
         navbar navbar-expand-lg navbar-light
-        bg-slate-800
+        bg-slate-900
         `}>
             <div className="container-fluid w-full flex flex-wrap items-center justify-end px-10 md:px-20">
                 <button className="
