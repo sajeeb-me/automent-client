@@ -1,14 +1,12 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     const [user] = useAuthState(auth)
-    const location = useLocation()
-    // console.log(location)
 
     return (
         <nav className={`
@@ -21,8 +19,7 @@ const Header = () => {
         navbar navbar-expand-lg navbar-light
         bg-slate-800
         `}>
-            {/* ${location.key === 'default' && 'hidden'} */}
-            <div className="container-fluid w-full flex flex-wrap items-center justify-between px-20">
+            <div className="container-fluid w-full flex flex-wrap items-center justify-end px-10 md:px-20">
                 <button className="
             navbar-toggler
             text-gray-500
@@ -42,7 +39,7 @@ const Header = () => {
                     </svg>
                 </button>
                 <div className="collapse navbar-collapse flex-grow justify-between items-center" id="navbarSupportedContent">
-                    <Link to='/'>AutoMent</Link>
+                    <Link to='/'><p className='text-xl'>Auto<span className='text-cyan-500'>Ment</span></p></Link>
                     <div className='block md:flex gap-3'>
                         <ActiveLink className='pb-2' to='/'>Home</ActiveLink>
                         <ActiveLink className='pb-2' to='/blogs'>Blogs</ActiveLink>
