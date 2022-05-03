@@ -31,7 +31,7 @@ const Footer = () => {
                                     href="tel:123-456-7890"
                                     aria-label="Our phone"
                                     title="Our phone"
-                                    className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                                    className="transition-colors duration-300 hover:text-cyan-500"
                                 >
                                     123-456-7890
                                 </a>
@@ -42,7 +42,7 @@ const Footer = () => {
                                     href="mailto:hellosdshuvo@gmail.com"
                                     aria-label="Our email"
                                     title="Our email"
-                                    className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                                    className="transition-colors duration-300 hover:text-cyan-500"
                                 >
                                     hellosdshuvo@gmail.com
                                 </a>
@@ -55,7 +55,7 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     aria-label="Our address"
                                     title="Our address"
-                                    className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                                    className="transition-colors duration-300 hover:text-cyan-500"
                                 >
                                     Sylhet, Bangladesh
                                 </a>
@@ -112,7 +112,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to='/'
-                                    className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                                    className="text-sm text-gray-600 transition-colors duration-300 hover"
                                 >
                                     F.A.Q
                                 </Link>
@@ -120,7 +120,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to='/'
-                                    className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                                    className="text-sm text-gray-600 transition-colors duration-300 hover"
                                 >
                                     Privacy Policy
                                 </Link>
@@ -128,7 +128,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to='/'
-                                    className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                                    className="text-sm text-gray-600 transition-colors duration-300 hover"
                                 >
                                     Terms &amp; Conditions
                                 </Link>
