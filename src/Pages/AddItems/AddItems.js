@@ -12,7 +12,7 @@ const AddItems = () => {
     const onSubmit = (data) => {
         // console.log(data);
         (async () => {
-            await axios.post('http://localhost:5000/items', data)
+            await axios.post('https://evening-waters-64317.herokuapp.com/items', data)
                 .then(data => {
                     const confirmation = window.confirm("Please check all information and confirm.")
                     if (confirmation) {
@@ -33,7 +33,7 @@ const AddItems = () => {
 
                     <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full' placeholder='Inventory price' type="number" {...register("price", { required: true })} />
 
-                    <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full' placeholder='Inventory image url' type="text" {...register("image", { required: true })} />
+                    <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full' placeholder='Inventory image url' type="text" {...register("img", { required: true })} />
 
                     <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full' placeholder='Inventory description' type="text" {...register("description", { required: true })} />
 

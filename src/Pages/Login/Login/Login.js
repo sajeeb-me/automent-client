@@ -32,18 +32,21 @@ const Login = () => {
         return <PageLoading />
     }
     if (error) {
-        console.log(error.message)
-        toast.error("Something went wrong!")
+        switch (error?.code) {
+            case "auth/user-not-found":
+                toast.error("Email is not valid")
+                break;
+            case "auth/wrong-password":
+                toast.error("Wrong password")
+                break;
+            default:
+                toast.error("Something went wrong")
+        }
     }
 
     const onSubmit = async (data) => {
         await signInWithEmailAndPassword(data.email, data.password)
     };
-
-    const handleResetEmail = () => {
-        // sendPasswordResetEmail(email)
-        // console.log(email)
-    }
 
     return (
         <div className='min-h-[90vh] py-10 px-4 md:px-20'>
@@ -55,7 +58,7 @@ const Login = () => {
                     <input className='block mb-4 bg-transparent border p-2 outline-none rounded-md w-full' placeholder='Password' type="password" {...register("password", { required: true })} />
                     <input className='hover:bg-cyan-500 bg-cyan-600 py-3 px-10 rounded-md w-full duration-200 ease-in-out' type="submit" value="Login" />
                 </form>
-                <button onClick={handleResetEmail} className='my-2 opacity-60 hover:opacity-100 duration-300 ease-in-out'>Forget password ?</button>
+                <button onClick={() => navigate('/forgetPass')} className='my-2 opacity-60 hover:opacity-100 duration-300 ease-in-out'>Forget password ?</button>
                 <SocialLogin />
             </section>
         </div>

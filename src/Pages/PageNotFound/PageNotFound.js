@@ -10,7 +10,7 @@ const PageNotFound = () => {
                 backgroundImage: `url(${NotFoundImage})`
             }}
         >
-            <button onClick={() => navigate('/')} className='border py-3 px-10 rounded-lg text-xl  ml-[450px] hover:bg-white hover:text-black duration-300 ease-in-out'>Go Back</button>
+            <button onClick={() => navigate('/')} className='border py-3 px-10 rounded-lg text-xl  ml-0 md:ml-[450px] hover:bg-white hover:text-black duration-300 ease-in-out'>Go Back</button>
         </div>
     );
 };

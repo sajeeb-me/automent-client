@@ -16,7 +16,7 @@ const MyItems = () => {
             const email = user?.email
             if (email) {
                 try {
-                    const { data } = await axios.get(`http://localhost:5000/items?email=${email}`, {
+                    const { data } = await axios.get(`https://evening-waters-64317.herokuapp.com/items?email=${email}`, {
                         headers: {
                             authentication: `Bearer ${localStorage.getItem('accessToken')}`
                         }
@@ -35,7 +35,7 @@ const MyItems = () => {
 
     const handleDelete = async (id) => {
         (async () => {
-            await axios.delete(`http://localhost:5000/items/${id}`)
+            await axios.delete(`https://evening-waters-64317.herokuapp.com/items/${id}`)
                 .then(data => {
                     const confirmation = window.confirm("Are you sure to delete this Inventory?")
                     if (confirmation) {
@@ -56,8 +56,8 @@ const MyItems = () => {
             <p className='text-sm md:text-base mt-3 w-full md:w-1/2 mx-auto opacity-70 font-thin mb-10'>Here you can see your all inventories added by you. You can update , delete and add more inventories from here.</p>
             <div>
                 <div className="flex flex-col">
-                    <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                        <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div className="overflow-x-auto">
+                        <div className="py-2 inline-block min-w-full">
                             <div className="overflow-hidden">
                                 <table className="min-w-full">
                                     <thead className="border-b border-slate-400 bg-slate-900">

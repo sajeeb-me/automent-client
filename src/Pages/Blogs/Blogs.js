@@ -55,7 +55,7 @@ const Blogs = () => {
                                     <p className="mb-4 text-xl font-medium">
                                         1. Difference between Javascript and nodejs
                                     </p>
-                                    <p className="opacity-60 font-thin">
+                                    <div className="opacity-60 font-thin">
                                         Javascript is a scripting programming language which is used to write scripts in website. Which is upgraded version of ECMA script.
                                         <br />
                                         Shortly we can say, NodeJS is a Javascript runtime environment.
@@ -72,13 +72,13 @@ const Blogs = () => {
                                         <br />
                                         <br />
                                         Javascript is used for frontend development whereas NodeJS is used in server side development.
-                                    </p>
+                                    </div>
                                 </div>
                                 <div>
                                     <p className="mb-4 text-xl font-medium">
                                         3. Differences between SQL and NoSQL databases.
                                     </p>
-                                    <p className="opacity-60 font-thin">
+                                    <div className="opacity-60 font-thin">
                                         Some differences between SQL and NoSQL databases :
                                         <br />
                                         <br />
@@ -100,7 +100,7 @@ const Blogs = () => {
                                                 For multi-row transactions SQL databases are better and for unstructured data like JSON or documents, NoSQL databases are better.
                                             </li>
                                         </ul>
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                             {/* right side  */}
@@ -114,7 +114,7 @@ const Blogs = () => {
                                             Well, NodeJS and MongoDB are two different process. Here I tried to explain as simpler as possible:
                                         </p>
 
-                                        <ul class="list-disc">
+                                        <ul className="list-disc">
                                             <li className='font-bold mt-5'>NodeJS</li>
                                             <p>
                                                 Shortly we can say, NodeJS is a JavaScript runtime environment. It's actually helps JavaScript to run outside of server. It's used in server side development.
@@ -144,7 +144,7 @@ const Blogs = () => {
                                         4. What is the purpose of JWT and how does it work ?
                                     </p>
                                     <div className="opacity-60 font-thin">
-                                        <p>
+                                        <div>
                                             JWT or Json Web Token is an open standard used to share security information between client site and server site as a JSON object. It is Signed digitally that's why this information can be trusted and verified. To ensure that the claims can't be changed after the token is issued , JWT are signed using a cryptographic algorithm.
                                             <br />
                                             <br />
@@ -161,7 +161,7 @@ const Blogs = () => {
                                             <p>
                                                 When a user successfully logged in by their all information, a JSON Web Token will be returned. And then whenever the user is about to use the protected route , a JWT will send throw Authorization header by user agent. Then, the server protected route will check is this JWT valid or not . If the JWT is valid the server will give the user to access and if not then the user will not able to access and can be logged out.
                                             </p>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

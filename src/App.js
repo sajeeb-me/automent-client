@@ -5,6 +5,7 @@ import './App.css';
 import AddItems from './Pages/AddItems/AddItems';
 import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home/Home';
+import ForgetPass from './Pages/Login/ForgetPass/ForgetPass';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import ManageItems from './Pages/ManageItems/ManageItems';
@@ -46,6 +47,7 @@ function App() {
         } />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/forgetPass' element={<ForgetPass />} />
         <Route path='/loading' element={<PageLoading />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>

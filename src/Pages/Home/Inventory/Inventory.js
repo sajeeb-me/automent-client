@@ -20,7 +20,7 @@ const Inventory = ({ item }) => {
                     <hr className='my-2 opacity-20' />
                     <div className='flex justify-between font-thin'>
                         {quantity === 0 ? <p className='text-red-500'>Stock Out</p> : <p>Quantity : {quantity}</p>}
-                        <p>Dealer : {supplier}</p>
+                        <p>Supplier : {supplier}</p>
                     </div>
                     <hr className='my-2 opacity-20' />
                     <p className='text-left mt-5'><button onClick={() => navigate(`/inventories/${_id}`)} className='hover:bg-cyan-500 border border-cyan-500 py-2 px-8 rounded-md duration-200 ease-in-out'>Update</button></p>

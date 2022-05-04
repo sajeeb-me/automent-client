@@ -17,7 +17,7 @@ const Banner = () => {
                     <h1>Manage Your <span className='text-cyan-500'>Inventories</span></h1>
                     <h1>Boost Your Business</h1>
                 </div>
-                <p className='text-sm my-2'>It's always important to manage your Inventories to keep your Business in track.</p>
+                <p className='text-sm my-2 opacity-70'>It's always important to manage your Inventories to keep your Business in track.</p>
                 <button onClick={() => navigate('/inventories/manage')} className='border border-cyan-500 px-10 py-3 rounded-lg hover:bg-cyan-500 duration-300 ease-in-out mt-5'>Manage</button>
             </section>
         </div>
