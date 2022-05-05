@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import useInventories from '../../../Hooks/useInventories';
 import Inventory from '../Inventory/Inventory';
 
-const InventoryItems = () => {
+const InventoryItems = ({ inventories }) => {
     const navigate = useNavigate();
-    const [inventories] = useInventories()
+
+
     return (
         <div className='mt-10 py-10 px-4 md:px-20'>
             <section>

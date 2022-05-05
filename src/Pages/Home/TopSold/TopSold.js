@@ -4,11 +4,11 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import './TopSold.css'
 
-import car1 from '../../../../images/car/car-1.jpg'
-import car2 from '../../../../images/car/car-2.jpg'
-import car3 from '../../../../images/car/car-3.jpg'
-import car4 from '../../../../images/car/car-4.jpg'
-import car5 from '../../../../images/car/car-5.jpg'
+import car1 from '../../../images/car/car-1.jpg'
+import car2 from '../../../images/car/car-2.jpg'
+import car3 from '../../../images/car/car-3.jpg'
+import car4 from '../../../images/car/car-4.jpg'
+import car5 from '../../../images/car/car-5.jpg'
 
 
 import { EffectCards } from "swiper";
