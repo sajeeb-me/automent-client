@@ -40,7 +40,7 @@ const Header = () => {
                 </button>
                 <div className="collapse navbar-collapse flex-grow justify-between items-center" id="navbarSupportedContent">
                     <Link to='/'><p className='text-xl'>Auto<span className='text-cyan-500'>Ment</span></p></Link>
-                    <div className='block md:flex gap-3'>
+                    <div className='block md:flex gap-3 text-sm'>
                         <ActiveLink className='pb-2' to='/'>Home</ActiveLink>
                         <ActiveLink className='pb-2' to='/blogs'>Blogs</ActiveLink>
                         {
