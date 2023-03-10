@@ -9,7 +9,7 @@ const UpdateItems = () => {
     const [inventory, setInventory] = useState({})
     useEffect(() => {
         (async () => {
-            const { data } = await axios.get(`https://evening-waters-64317.herokuapp.com/items/${id}`);
+            const { data } = await axios.get(`https://automent-server.vercel.app/items/${id}`);
             setInventory(data);
         })()
     }, [inventory, id])
@@ -20,7 +20,7 @@ const UpdateItems = () => {
         const { _id, quantity, ...rest } = inventory;
         const newQuantity = parseInt(quantity) - 1;
         const newInventory = { quantity: newQuantity, ...rest };
-        const { data } = await axios.put(`https://evening-waters-64317.herokuapp.com/items/${id}`, newInventory)
+        const { data } = await axios.put(`https://automent-server.vercel.app/items/${id}`, newInventory)
         setInventory(data);
         toast.info(`${name} delivered`)
     }
@@ -32,7 +32,7 @@ const UpdateItems = () => {
         const { _id, quantity, ...rest } = inventory;
         const newQuantity = parseInt(quantity) + number;
         const newInventory = { quantity: newQuantity, ...rest };
-        const { data } = await axios.put(`https://evening-waters-64317.herokuapp.com/items/${id}`, newInventory)
+        const { data } = await axios.put(`https://automent-server.vercel.app/items/${id}`, newInventory)
         setInventory(data);
         // console.log(data)
         toast.success(`${number} products added successfully.`)

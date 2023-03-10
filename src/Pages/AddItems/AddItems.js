@@ -12,7 +12,7 @@ const AddItems = () => {
     const onSubmit = (data) => {
         // console.log(data);
         (async () => {
-            await axios.post('https://evening-waters-64317.herokuapp.com/items', data)
+            await axios.post('https://automent-server.vercel.app/items', data)
                 .then(data => {
                     const confirmation = window.confirm("Please check all information and confirm.")
                     if (confirmation) {

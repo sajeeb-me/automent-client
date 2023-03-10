@@ -16,7 +16,7 @@ const MyItems = () => {
             const email = user?.email
             if (email) {
                 try {
-                    const { data } = await axios.get(`https://evening-waters-64317.herokuapp.com/items?email=${email}`, {
+                    const { data } = await axios.get(`https://automent-server.vercel.app/items?email=${email}`, {
                         headers: {
                             authentication: `Bearer ${localStorage.getItem('accessToken')}`
                         }
@@ -35,7 +35,7 @@ const MyItems = () => {
 
     const handleDelete = async (id) => {
         (async () => {
-            await axios.delete(`https://evening-waters-64317.herokuapp.com/items/${id}`)
+            await axios.delete(`https://automent-server.vercel.app/items/${id}`)
                 .then(data => {
                     const confirmation = window.confirm("Are you sure to delete this Inventory?")
                     if (confirmation) {

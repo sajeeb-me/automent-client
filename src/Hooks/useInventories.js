@@ -8,7 +8,7 @@ const useInventories = () => {
     useEffect(() => {
         (async () => {
             setIsLoading(true);
-            const { data } = await axios.get('https://evening-waters-64317.herokuapp.com/items')
+            const { data } = await axios.get('https://automent-server.vercel.app/items')
             setInventories(data)
             setIsLoading(false);
         })()

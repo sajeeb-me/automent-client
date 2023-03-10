@@ -12,21 +12,21 @@ const ManageItems = () => {
     const [inventories, setInventories] = useState([])
     useEffect(() => {
         (async () => {
-            const { data } = await axios.get(`https://evening-waters-64317.herokuapp.com/items?pageNo=${pageNo}&items=${items}`)
+            const { data } = await axios.get(`https://automent-server.vercel.app/items?pageNo=${pageNo}&items=${items}`)
             setInventories(data)
         })()
     }, [pageNo])
 
     useEffect(() => {
         (async () => {
-            const { data } = await axios.get('https://evening-waters-64317.herokuapp.com/items/total')
+            const { data } = await axios.get('https://automent-server.vercel.app/items/total')
             setPageCount(Math.ceil(data.total / items))
         })()
     }, [])
 
     const handleDelete = async (id) => {
         (async () => {
-            await axios.delete(`https://evening-waters-64317.herokuapp.com/items/${id}`)
+            await axios.delete(`https://automent-server.vercel.app/items/${id}`)
                 .then(data => {
                     const confirmation = window.confirm("Are you sure to delete this Inventory?")
                     if (confirmation) {
